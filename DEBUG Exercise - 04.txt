@@ -1,0 +1,48 @@
+// This pseudocode segment is intended to compute and display
+// the cost of home ownership for any number of users
+// The program ends when a user enters 0 for the mortgage payment
+
+start
+   Declarations
+      num mortgagePayment
+      num utilities
+      num taxes
+      num upkeep
+      num total
+   startup()
+   while mortgagePayment not equal to 0
+      MainLoop()
+   endwhile
+   finishUp()
+stop
+
+
+startUp()
+   output "Enter your mortgage payment or 0 to quit: "
+      // fixed formatting 
+   input mortagePayment
+      // fixed spelling of mortagePayment
+   output
+   
+return
+
+mainLoop()
+   output "Enter utilities: "
+      // fixed formatting
+   input utilities
+   output "Enter taxes: "
+      // fixed formatting
+   input taxes
+   output "Enter amount for upkeep: "
+      // fixed formatting
+   input upkeep
+   total = mortgagePayment + utilities + taxes + upkeep
+   output "Total cost of ownership is: ", total
+      // fixed formatting, added clarity
+   output "Enter your mortgage payment or 0 to quit: "
+      // reprimed the while loop
+return
+
+finishUp()
+   output "End of program"
+return

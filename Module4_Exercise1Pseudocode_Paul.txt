@@ -1,0 +1,18 @@
+start
+    declarations
+        num target
+        var guess
+    input guess
+    if guess > target, 
+        output "too high"
+    if guess < target, 
+        output "too low"
+    if guess = target, 
+        output "you got it right!"
+Stop
+
+// declare the target
+// input guess. 
+// if guess is too high, output "too high"
+// if guess is too low, output "too low"
+// if guess = target, output "you got it right!", end program 

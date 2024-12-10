@@ -1,0 +1,60 @@
+Start
+    Declarations
+        string guessWord
+        string targetWord
+        var position
+    startUp()
+    skipCount()
+    transitioning()
+    counting()
+Stop
+
+startUp()
+    input guessWord
+    var position = guessWord
+    if position is before targetWord, set status to "skippingForward".
+    if position is after targetWord, set status to "skippingBackward".
+    If position = targetWord, change status to "target found"
+return
+
+// startUp: select page at random. 
+// position starts at wordGuess
+// if position is alphabetically before target, set status to "skippingForward" 
+// If position is alphabetically after target, set status to "skippingBackward"
+// if position = target, change status to "target found". 
+
+
+skipCount()
+    if status is "skippingForward", then change position forward by 10 pages 
+    if status is "skippingBackward", then change position backward 10 pages
+    If position = targetWord, change status to "target found".
+return
+
+// skipCount:
+// if position is the same as targetWord, change status to "target found".
+// if status is "skippingBackward", then change position backward by 10 pages 
+// if status is "skippingForward", then change position forward by 10 pages 
+
+
+transitioning()
+    if position is behind and status is "skippingBackward", 
+        change status to "countingForward"
+    if position is behind and status is "skippingForward", 
+        change status to "countingBackward"
+return
+
+// transitioning:
+// if position changes from ahead to behind and status is "skippingBackward", change status to "countingForward".
+// if position changes from behind to ahead and status is "skippingForward", change status to "countingBackward".
+
+
+counting()
+    If position = targetWord, change status to "target found" and stop moving
+    if status is "countingBackward", then change position backward 1 page
+    if status is "countingForward", then change position forward 1 page
+return
+
+
+// if position is the same as targetWord, change status to "target found".
+// if status is "countingBackward", change position 1 page backward
+// if status is "countingForward", change position 1 page forward
